@@ -3,8 +3,6 @@ FROM python:3.6.2
 
 MAINTAINER Ryuhei.K <catelina0717@gmail.com>
 
-WORKDIR /
-
 RUN \
     apt-get update && \
     apt-get install -y \
@@ -53,10 +51,7 @@ RUN \
     rm /3.3.0.zip && \
     rm -r /opencv-3.3.0
 
-COPY . /usr/workspace
-WORKDIR /usr/workspace
-
-CMD ["bash"]
+CMD ["python3"]
 
 
 
